@@ -75,6 +75,7 @@ where total_sale is null;
 The following SQL queries were developed to answer specific business questions:
 
 1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05**:
+   ```sql
 SELECT 
     *
 FROM
@@ -83,7 +84,6 @@ WHERE
     YEAR(sale_date) = 2022
         AND MONTH(sale_date) = 11
         AND DAY(sale_date) = 05;
-
 ```
 
 2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 2 in the month of Nov-2022**:
@@ -97,7 +97,6 @@ WHERE
         AND YEAR(sale_date) = '2022'
         AND MONTH(sale_date) = 11
 ORDER BY transactions_id ASC;
-
 ```
 
 3. **Write a SQL query to calculate the total sales (total_sale) for each category.**:
@@ -150,7 +149,6 @@ FROM
     retail
 GROUP BY 1 , 2
 ORDER BY avg(total_sale) desc;
-
 ```
 
 9. **Write a SQL query to find the top 5 customers based on the highest total sales **:
