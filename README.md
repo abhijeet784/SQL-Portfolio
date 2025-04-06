@@ -187,7 +187,6 @@ WITH hourly_sales AS (
 SELECT Period, COUNT(*) AS Total_Orders
 FROM hourly_sales
 GROUP BY Period;
-
 ```
 
 ## Findings
