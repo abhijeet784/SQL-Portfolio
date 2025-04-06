@@ -163,8 +163,8 @@ ORDER BY 1 DESC
 LIMIT 5;
 ```
 
-9. **Write a SQL query to find the number of unique customers who purchased items from each category.**:
-    ```sql
+9.  **Write a SQL query to find the number of unique customers who purchased items from each category.**:
+```sql
 SELECT 
     category, COUNT(DISTINCT customer_id) AS unique_customer
 FROM
