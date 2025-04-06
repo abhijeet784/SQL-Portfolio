@@ -74,8 +74,8 @@ where total_sale is null;
 
 The following SQL queries were developed to answer specific business questions:
 
-1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05**:
-   ```sql
+1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05.**:
+```sql
 SELECT 
     *
 FROM
@@ -86,9 +86,9 @@ WHERE
         AND DAY(sale_date) = 05;
 ```
 
-2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 2 in the month of Nov-2022**:
+2.  **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 2 in the month of Nov-2022.**:
 ```sql
-SELECT 
+SESELECT 
     transactions_id
 FROM
     retail
@@ -139,8 +139,8 @@ GROUP BY 1 , 2
 ORDER BY 2 ASC;
 ```
 
-7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**:
-   ```sql
+7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year.**:
+```sql
 SELECT 
     YEAR(sale_date) AS year,
     MONTH(sale_date) AS month,
@@ -149,9 +149,10 @@ FROM
     retail
 GROUP BY 1 , 2
 ORDER BY avg(total_sale) desc;
+
 ```
 
-9. **Write a SQL query to find the top 5 customers based on the highest total sales **:
+8. **Write a SQL query to find the top 5 customers based on the highest total sales .**:
 ```sql
 SELECT 
     customer_id, SUM(total_sale) AS top_customer
@@ -172,7 +173,7 @@ WHERE
 GROUP BY category;
 ```
 
-10. **Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17)**:
+10. **Write a SQL query to create each shift and number of orders (Example Morning <=12, Afternoon Between 12 & 17, Evening >17)**:
 ```sql
 WITH hourly_sales AS (
     SELECT *,
@@ -186,6 +187,7 @@ WITH hourly_sales AS (
 SELECT Period, COUNT(*) AS Total_Orders
 FROM hourly_sales
 GROUP BY Period;
+
 ```
 
 ## Findings
