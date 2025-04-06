@@ -98,6 +98,8 @@ WHERE
         AND MONTH(sale_date) = 11
 ORDER BY transactions_id ASC;
 
+```
+
 3. **Write a SQL query to calculate the total sales (total_sale) for each category.**:
 ```sql
 SELECT 
@@ -139,6 +141,7 @@ ORDER BY 2 ASC;
 ```
 
 7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**:
+   ```sql
 SELECT 
     YEAR(sale_date) AS year,
     MONTH(sale_date) AS month,
@@ -148,7 +151,9 @@ FROM
 GROUP BY 1 , 2
 ORDER BY avg(total_sale) desc;
 
-8. **Write a SQL query to find the top 5 customers based on the highest total sales **:
+```
+
+9. **Write a SQL query to find the top 5 customers based on the highest total sales **:
 ```sql
 SELECT 
     customer_id, SUM(total_sale) AS top_customer
